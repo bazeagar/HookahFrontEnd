@@ -23,7 +23,7 @@ const Post = ({ item }) => {
     <div className="tweet">
       <Avatar imgUrl={item.imgUrl} />
       <div className="content">
-        <NameWithHandle handle={item.handle} name={item.name} /> <Time />
+        <NameWithHandle name={item.userName} handle={item.handle} /> <Time />
         <Message data={item.message} />
         <div className="buttons">
           <ChatBubbleOutlineIcon />
