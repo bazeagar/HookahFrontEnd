@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const logo = require("../assets/logo.png");
 
 const Home = () => {
@@ -7,14 +9,17 @@ const Home = () => {
     <>
       <img src={logo} className="App-logo pageBody" alt="logo" />
       <p>{title}</p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        style={{
+          textDecoration: "none",
+          fontSize: "1rem",
+          color: "white",
+          display: "block",
+        }}
+        to="/HookahLab"
       >
         {description}
-      </a>
+      </Link>
     </>
   );
 };
