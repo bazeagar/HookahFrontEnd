@@ -6,8 +6,8 @@
 
 ### Hookah tips
 ### Hookah finder
-- [ ] Google map integration
-- [ ] State management between list and map components
+- [x] Google map integration
+- [x] State management between list and map components
 - [ ] Search functionality
 - [ ] Advanced filters and other features for Search
 - [ ] Modal for adding new store info
