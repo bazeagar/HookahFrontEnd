@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Paper, InputBase, Divider, IconButton, Button } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import { Paper, InputBase, Divider, IconButton, Button  } from "@mui/material";
+import { Search } from "@mui/icons-material";
 import Modal from '../Modal';
+import AddModalContent from "./AddModalContent";
 
 export default function CustomizedInputBase() {
   const [open, setOpen] = React.useState(false);
@@ -23,7 +24,7 @@ export default function CustomizedInputBase() {
         inputProps={{ "aria-label": "search google maps" }}
       />
       <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
-        <SearchIcon />
+        <Search />
       </IconButton>
       <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
       <Button
@@ -33,7 +34,7 @@ export default function CustomizedInputBase() {
       </Button>
     </Paper>
     <Modal handleClose={handleClose} open={open}>
-      <span>hi</span>
+      <AddModalContent handleClose={handleClose} />
     </Modal>
     </>
   );
