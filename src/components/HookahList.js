@@ -1,10 +1,11 @@
-import HookahLocationCard from "./HookaLocationCard";
+import "./styles/HookahList.scss";
+import HookahLocationCard from "./HookahLocationCard";
 import Grid from "@mui/material/Grid";
 
 const GridItem = (item) => {
   return (
     <>
-      <Grid item xs={12} justifyContent="center">
+      <Grid className="HookahList" item xs={12} justifyContent="center">
         <HookahLocationCard
           imageUrl={item.imgUrl}
           title={item.name}

@@ -10,10 +10,7 @@ const FindHookah = () => {
       <div className="FindHookah-header">{title}</div>
       <div className="FindHookah-body">
         <div className="FindHookah-list">
-          List View coming soon
-          <div className="FindHookah-list-data">
-            <GetHookahList list={dummyLists} />
-          </div>
+          <GetHookahList list={dummyLists} />
         </div>
         <Map class="FindHookah-map" />
       </div>

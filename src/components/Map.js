@@ -24,8 +24,8 @@ const GMap = ({ className, center, zoom }) => {
 };
 
 const Map = (props) => {
-  const center = { lat: -34.397, lng: 150.644 };
-  const zoom = 4;
+  const center = { lat: -37.8148335, lng: 144.937862 };
+  const zoom = 17;
   return (
     <Wrapper apiKey={API_KEY} render={render}>
       <GMap className={props.class} center={center} zoom={zoom} />
