@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Modal from "@mui/material/Modal";
+import Modal from "./Modal";
 import Select from "@mui/material/Select";
 import {
   hookahFlavours,
@@ -54,9 +54,7 @@ const HookahLab = () => {
       <>
         <Modal
           open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
+          handleClose={handleClose}
         >
           <Box sx={style}>
             <div>
