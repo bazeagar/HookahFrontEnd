@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 
 const HookahLocationCard = ({ title, imageUrl, rating }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 345 }}>
       <CardMedia
         component="img"
         height="140"

@@ -3,7 +3,8 @@ import React, { useEffect, useRef } from "react";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import config from '../config';
 
-const API_KEY = config.API_KEY;
+const GM_API_KEY = config.GM_API_KEY;
+const GC_API_KEY = config.GC_API_KEY;
 
 const render = (status) => {
   if (status === Status.LOADING) return <h3>{status} ..</h3>;
@@ -11,25 +12,36 @@ const render = (status) => {
   return null;
 };
 
-const GMap = ({ className, center, zoom }) => {
+const GMap = ({ className, list, center, zoom }) => {
   const ref = useRef();
 
   useEffect(() => {
-    new window.google.maps.Map(ref.current, {
+    const map = new window.google.maps.Map(ref.current, {
       center,
       zoom,
     });
+    list.map((item) =>
+      fetch(`https://plus.codes/api?address=${item.address.plusCode}&key=${GC_API_KEY}`)
+      .then(res => res.json())
+      .then(
+        (result) => new window.google.maps.Marker({
+          position: result.plus_code.geometry.location,
+          map: map}),
+        (error) => console.error(error)
+    ));
   });
 
-  return <div className={className ?? "Map"} ref={ref} id="map" />;
+  return (
+    <div className={className ?? "Map"} ref={ref} />
+  );
 };
 
 const Map = (props) => {
   const center = { lat: -37.8148335, lng: 144.937862 };
-  const zoom = 17;
+  const zoom = 15;
   return (
-    <Wrapper apiKey={API_KEY} render={render}>
-      <GMap className={props.class} center={center} zoom={zoom} />
+    <Wrapper apiKey={GM_API_KEY} render={render}>
+      <GMap className={props.class} list = {props.list} center={center} zoom={zoom} />
     </Wrapper>
   );
 };

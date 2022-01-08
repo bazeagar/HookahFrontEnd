@@ -15,7 +15,7 @@ const FindHookah = () => {
         <div className="FindHookah-list">
           <GetHookahList list={dummyLists} />
         </div>
-        <Map class="FindHookah-map" />
+        <Map class="FindHookah-map" list={dummyLists} />
       </div>
     </div>
   );
