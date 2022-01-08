@@ -8,4 +8,4 @@
 
 ## How to run app
 
-`yarn install && yarn run`
+`yarn dev`
