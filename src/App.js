@@ -1,26 +1,28 @@
-import './App.css';
+import "./App.css";
+import FindHookah from "./components/FindHookah";
 
-const logo = require('./assets/logo.png');
+const logo = require("./assets/logo.png");
 
-function App() {
+const App = () => {
+  const title = "Welcome to Hooka.wiki!";
+  const description = "Visit our Hookah Lab";
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Welcome to Hooka.wiki!
-        </p>
+        <p>{title}</p>
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit our Hookah Lab
-        </a>  
+          {description}
+        </a>
       </header>
+      <FindHookah />
     </div>
   );
-}
+};
 
 export default App;
