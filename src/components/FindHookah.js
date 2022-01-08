@@ -1,5 +1,5 @@
 const FindHookah = () => {
-  const title = "Find hookah  near me";
+  const title = "Find hookah near me";
   return (
     <>
       <div>{title}</div>
