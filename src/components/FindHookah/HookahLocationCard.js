@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Card, CardContent, CardActions, CardMedia, Typography, Button, Grid } from "@mui/material";
-import { Star, Phone, Public } from "@mui/icons-material";
+import { Star, Phone, Public, Directions } from "@mui/icons-material";
 import { yellow } from '@mui/material/colors';
 
 const HookahLocationCard = ({ item, setActiveListItem, activeListItem }) => {
@@ -38,12 +38,13 @@ const HookahLocationCard = ({ item, setActiveListItem, activeListItem }) => {
       {
         activeListItem === item
         ? <CardActions style={{ display: "flex", justifyContent: "space-around" }}>
-        <Button
-          style={{ width: "35%", display: "flex", justifyContent: "space-around"}}
-          href={item.website} target="_blank"><Public color="primary" />Visit Website</Button>
-        <Button
-          style={{ width: "35%", display: "flex", justifyContent: "space-around"}}
-          href={`tel:${item.phone}`}><Phone color="primary" /> {item.phone}</Button>
+        <Button target="_blank"
+          href={item.website}><Public color="primary" /> &nbsp; Visit Website</Button>
+        <Button target="_blank"
+          href={`tel:${item.phone}`}><Phone color="primary" /> &nbsp; Call </Button>
+        <Button target="_blank"
+          href={`https://maps.google.com/?q=${item.address.position.lat},${item.address.position.lng}`}>
+            <Directions color="primary" /> &nbsp; Directions </Button>
         </CardActions>
         : null
       }
