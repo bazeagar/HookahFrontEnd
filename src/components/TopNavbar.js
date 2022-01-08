@@ -44,7 +44,17 @@ const TopNavBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            Hookah.wiki
+            <Link
+              style={{
+                textDecoration: "none",
+                my: 4,
+                color: "white",
+                display: "block",
+              }}
+              to="/"
+            >
+              Hookah.wiki
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
