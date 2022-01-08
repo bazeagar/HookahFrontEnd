@@ -61,7 +61,31 @@ const TopNavBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Link to="/FindHookah">Find Hookah</Link>
+            <Link
+              style={{
+                textDecoration: "none",
+                my: 4,
+                color: "white",
+                marginLeft: "1rem",
+                display: "block",
+              }}
+              to="/FindHookah"
+            >
+              Find Hookah
+            </Link>
+
+            <Link
+              style={{
+                textDecoration: "none",
+                my: 4,
+                color: "white",
+                display: "block",
+                marginLeft: "1rem",
+              }}
+              to="/Tips"
+            >
+              Tips
+            </Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
