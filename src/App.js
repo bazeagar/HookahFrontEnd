@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./styles/App.scss";
 import FindHookah from "./components/FindHookah";
 
 const logo = require("./assets/logo.png");
@@ -7,7 +7,7 @@ const App = () => {
   const title = "Welcome to Hooka.wiki!";
   const description = "Visit our Hookah Lab";
   return (
-    <div className="App">
+    <div classNameName="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>{title}</p>

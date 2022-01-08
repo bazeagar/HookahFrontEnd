@@ -1,0 +1,29 @@
+@import '../../styles/App';
+
+.FindHookah {
+    @extend .App;
+    height: 100%;
+}
+
+.FindHookah-link {
+    color: #61dafb;
+}
+
+.FindHookah-header {
+    width: 100%;
+}
+
+.FindHookah-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.FindHookah-list {
+    width: 50%;
+}
+
+.FindHookah-map {
+    width: 50%;
+    height: 100vh;
+}

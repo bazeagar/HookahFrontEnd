@@ -1,5 +1,7 @@
 # HookahFrontEnd
+
 ![Logo](./src/assets/logo.png)
+
 ## Features
 
 - Hookah tips
