@@ -1,26 +1,21 @@
 import "./styles/App.scss";
 import FindHookah from "./components/FindHookah";
-
-const logo = require("./assets/logo.png");
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/HomePage";
+import Tips from "./components/Tips";
+import TopNavBar from "./components/TopNavbar";
+import HookahLab from "./components/HookahLab";
 
 const App = () => {
-  const title = "Welcome to Hooka.wiki!";
-  const description = "Visit our Hookah Lab";
   return (
-    <div classNameName="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{title}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {description}
-        </a>
-      </header>
-      <FindHookah />
+    <div className="App">
+      <TopNavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/FindHookah" element={<FindHookah />} />
+        <Route path="/Tips" element={<Tips />} />
+        <Route path="/HookahLab" element={<HookahLab />} />
+      </Routes>
     </div>
   );
 };

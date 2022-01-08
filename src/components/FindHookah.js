@@ -2,7 +2,7 @@ import './styles/FindHookah.scss';
 import Map from './Map';
 
 const FindHookah = () => {
-  const title = "Find hookah  near me";
+  const title = "Find hookah near me";
   return (
     <div className="FindHookah">
       <div className="FindHookah-header">
