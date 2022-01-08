@@ -96,6 +96,19 @@ const TopNavBar = () => {
             >
               Tips
             </Link>
+
+            <Link
+              style={{
+                textDecoration: "none",
+                my: 4,
+                color: "white",
+                display: "block",
+                marginLeft: "1rem",
+              }}
+              to="/HookahLab"
+            >
+              Hookah Lab (beta)
+            </Link>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
