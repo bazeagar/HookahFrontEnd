@@ -1,3 +1,4 @@
+import "./styles/TopNavbar.scss";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -35,6 +36,7 @@ const TopNavBar = () => {
   };
 
   return (
+    <div className="navbar">
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -47,7 +49,7 @@ const TopNavBar = () => {
             <Link
               style={{
                 textDecoration: "none",
-                my: 4,
+                fontSize: "1.2rem",
                 color: "white",
                 display: "block",
               }}
@@ -74,7 +76,7 @@ const TopNavBar = () => {
             <Link
               style={{
                 textDecoration: "none",
-                my: 4,
+                fontSize: "1.2rem",
                 color: "white",
                 marginLeft: "1rem",
                 display: "block",
@@ -87,7 +89,7 @@ const TopNavBar = () => {
             <Link
               style={{
                 textDecoration: "none",
-                my: 4,
+                fontSize: "1.2rem",
                 color: "white",
                 display: "block",
                 marginLeft: "1rem",
@@ -100,7 +102,7 @@ const TopNavBar = () => {
             <Link
               style={{
                 textDecoration: "none",
-                my: 4,
+                fontSize: "1.2rem",
                 color: "white",
                 display: "block",
                 marginLeft: "1rem",
@@ -143,6 +145,7 @@ const TopNavBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    </div>
   );
 };
 export default TopNavBar;
