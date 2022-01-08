@@ -1,7 +1,7 @@
 import HookahLocationCard from "./HookahLocationCard";
 import Grid from "@mui/material/Grid";
 
-const GridItem = (item) => {
+const GridItem = (item, props) => {
   return (
     <Grid
       key={item.id}
@@ -11,15 +11,13 @@ const GridItem = (item) => {
         justifyContent: "center"
       }} item xs={12}>
       <HookahLocationCard
-        id={item.id}
-        imageUrl={item.imgUrl}
-        title={item.name}
-        rating={item.rating}
+        item={item}
+        {...props}
       />
     </Grid>
   );
 };
-const GetHookahList = ({ list }) => {
+const GetHookahList = (props) => {
   return (
     <Grid
       container
@@ -29,7 +27,7 @@ const GetHookahList = ({ list }) => {
         overflow: "auto"
       }}
     >
-      {list.map((item) => GridItem(item))}
+      {props.list.map((item) => GridItem(item, props))}
     </Grid>
   );
 };
