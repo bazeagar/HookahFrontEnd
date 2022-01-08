@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 const GridItem = (item) => {
   return (
     <Grid
+      key={item.id}
       style={{
         maxHeight: "100%",
         display: "flex",
