@@ -5,6 +5,7 @@ import Home from "./components/HomePage";
 import Tips from "./components/Tips";
 import TopNavBar from "./components/TopNavbar";
 import HookahLab from "./components/HookahLab";
+import Posts from "./components/Posts";
 import PageNotFound from "./components/404";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/FindHookah" element={<FindHookah />} />
         <Route path="/Tips" element={<Tips />} />
         <Route path="/HookahLab" element={<HookahLab />} />
+        <Route path="/Posts" element={<Posts />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
