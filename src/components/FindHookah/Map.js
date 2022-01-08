@@ -2,10 +2,8 @@ import "../styles/Map.scss";
 import React, { useEffect, useRef } from "react";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import config from '../../config';
-import { usePreviousProps } from "@mui/utils";
 
 const GM_API_KEY = config.GM_API_KEY;
-const GC_API_KEY = config.GC_API_KEY;
 
 const render = (status) => {
   if (status === Status.LOADING) return <h3>{status} ..</h3>;
