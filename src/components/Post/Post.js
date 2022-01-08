@@ -20,7 +20,7 @@ const Post = ({ item }) => {
   );
 
   return (
-    <div className="tweet">
+    <div className="post">
       <Avatar imgUrl={item.imgUrl} />
       <div className="content">
         <NameWithHandle name={item.userName} handle={item.handle} /> <Time />
