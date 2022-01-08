@@ -5,7 +5,6 @@ import SearchBar from "./SearchBar";
 import { dummyLists } from "./DummyHookahList";
 
 const FindHookah = () => {
-  const title = "Find hookah near me";
   return (
     <div className="FindHookah">
       <div className="FindHookah-header">
