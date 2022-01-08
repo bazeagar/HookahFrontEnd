@@ -4,9 +4,8 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
-const LabItem = ({ id, imageUrl, make, flavourRating, onDelete }) => {
+const LabItem = ({ id, imageUrl, make, name, flavourRating, onDelete }) => {
   return (
     <Card sx={{ width: 345 }} onClick={() => console.log(id)}>
       <CardMedia
@@ -16,7 +15,10 @@ const LabItem = ({ id, imageUrl, make, flavourRating, onDelete }) => {
         alt="hooka-card"
       />
       <CardContent>
-        Make:{make}
+        {make}
+        {"  "}
+        {name}
+        {" \n "}
         Strength:{flavourRating}
       </CardContent>
       <CardActions>
