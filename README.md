@@ -3,5 +3,5 @@
 ## Features
  - Hooka tips
  - Hookah finder
- - Hokkah lab
+ - Hokkah lab2
 
