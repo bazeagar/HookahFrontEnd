@@ -72,44 +72,45 @@ const TopNavBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <MenuItem>
             <Link
               style={{
                 textDecoration: "none",
-                fontSize: "1.2rem",
+                fontSize: "1rem",
                 color: "white",
-                marginLeft: "1rem",
                 display: "block",
               }}
               to="/FindHookah"
             >
               Find Hookah
             </Link>
-
+            </MenuItem>
+            <MenuItem>
             <Link
               style={{
                 textDecoration: "none",
-                fontSize: "1.2rem",
+                fontSize: "1rem",
                 color: "white",
                 display: "block",
-                marginLeft: "1rem",
               }}
               to="/Tips"
             >
               Tips
             </Link>
-
+            </MenuItem>
+            <MenuItem>
             <Link
               style={{
                 textDecoration: "none",
-                fontSize: "1.2rem",
+                fontSize: "1rem",
                 color: "white",
                 display: "block",
-                marginLeft: "1rem",
               }}
               to="/HookahLab"
             >
               Hookah Lab (beta)
             </Link>
+            </MenuItem>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
