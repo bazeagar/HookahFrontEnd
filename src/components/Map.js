@@ -28,7 +28,7 @@ const GMap = ({ className, list, center, zoom }) => {
           position: result.plus_code.geometry.location,
           map: map}),
         (error) => console.error(error)
-    ));
+      ));
   });
 
   return (
@@ -38,7 +38,7 @@ const GMap = ({ className, list, center, zoom }) => {
 
 const Map = (props) => {
   const center = { lat: -37.8148335, lng: 144.937862 };
-  const zoom = 15;
+  const zoom = 13;
   return (
     <Wrapper apiKey={GM_API_KEY} render={render}>
       <GMap className={props.class} list = {props.list} center={center} zoom={zoom} />
