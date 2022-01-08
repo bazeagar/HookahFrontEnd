@@ -11,6 +11,7 @@ const GridItem = (item) => {
         justifyContent: "center"
       }} item xs={12}>
       <HookahLocationCard
+        id={item.id}
         imageUrl={item.imgUrl}
         title={item.name}
         rating={item.rating}

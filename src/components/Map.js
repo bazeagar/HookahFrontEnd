@@ -21,12 +21,13 @@ const GMap = ({ className, list, center, zoom }) => {
       zoom,
     });
     list.map((item) =>
-      fetch(`https://plus.codes/api?address=${item.address.plusCode}&key=${GC_API_KEY}`)
+      item.address.position = fetch(`https://plus.codes/api?address=${item.address.plusCode}&key=${GC_API_KEY}`)
       .then(res => res.json())
       .then(
         (result) => new window.google.maps.Marker({
           position: result.plus_code.geometry.location,
-          map: map}),
+          map: map
+        }).addListener("click", () => console.log(item.id)),
         (error) => console.error(error)
       ));
   });

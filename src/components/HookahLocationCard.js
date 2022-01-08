@@ -5,9 +5,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
-const HookahLocationCard = ({ title, imageUrl, rating }) => {
+const HookahLocationCard = ({ id, title, imageUrl, rating }) => {
   return (
-    <Card sx={{ width: 345 }}>
+    <Card sx={{ width: 345 }}
+      onClick = {() => console.log(id)}
+    >
       <CardMedia
         component="img"
         height="140"
