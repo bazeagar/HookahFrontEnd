@@ -5,7 +5,7 @@ const Home = () => {
   const description = "Visit our Hookah Lab";
   return (
     <>
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src={logo} className="App-logo pageBody" alt="logo" />
       <p>{title}</p>
       <a
         className="App-link"

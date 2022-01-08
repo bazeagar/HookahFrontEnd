@@ -2,7 +2,7 @@
 
 .FindHookah {
     @extend .App;
-    padding-top: 5rem;
+    @extend .pageBody;
 }
 
 .FindHookah-link {
