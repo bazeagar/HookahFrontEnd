@@ -1,8 +1,9 @@
 import "./styles/Map.scss";
 import React, { useEffect, useRef } from "react";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import config from '../config';
 
-const API_KEY = process.env.GOOGLE_API_KEY;
+const API_KEY = config.API_KEY;
 
 const render = (status) => {
   if (status === Status.LOADING) return <h3>{status} ..</h3>;
