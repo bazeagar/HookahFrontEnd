@@ -10,7 +10,7 @@ const App = () => {
       <TopNavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<FindHookah />} />
+        <Route path="/FindHookah" element={<FindHookah />} />
       </Routes>
     </div>
   );
