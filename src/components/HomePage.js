@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const logo = require("../assets/logo.png");
 
 const Home = () => {
-  const title = "Welcome to Hooka.wiki!";
+  const title = "Welcome to Hookah.wiki!";
   const description = "Visit our Hookah Lab";
   return (
     <>
