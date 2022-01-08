@@ -1,15 +1,31 @@
 import * as React from "react";
-import { Paper, InputBase, Divider, IconButton, Button } from "@mui/material";
+import { Paper, InputBase, Divider, IconButton, Button, Modal, Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import DirectionsIcon from "@mui/icons-material/Directions";
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  p: 4,
+};
+
 
 export default function CustomizedInputBase() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
+    <>
     <Paper
       component="form"
       sx={{
         display: "flex",
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       <InputBase
@@ -21,9 +37,23 @@ export default function CustomizedInputBase() {
         <SearchIcon />
       </IconButton>
       <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-      <Button color="primary" sx={{ p: "10px" }} aria-label="directions">
+      <Button
+        onClick={handleOpen}
+        color="primary" sx={{ p: "10px" }} aria-label="add store info">
         Add store info
       </Button>
     </Paper>
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style}>
+      <span>hi</span>
+      </Box>
+      
+    </Modal>
+    </>
   );
 }
