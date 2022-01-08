@@ -1,0 +1,51 @@
+export const fakePosts = [
+  {
+    message: "hello world",
+    imgUrl: "https://picsum.photos/200/200",
+    posted: "2 min ago",
+    userName: "john doe",
+    handle: "@johndoe",
+  },
+  {
+    message: "hello world",
+    imgUrl: "https://picsum.photos/200/200",
+    posted: "2 min ago",
+    userName: "john doe",
+    handle: "@johndoe",
+  },
+  {
+    message: "hello world",
+    imgUrl: "https://picsum.photos/200/200",
+    posted: "2 min ago",
+    userName: "john doe",
+    handle: "@johndoe",
+  },
+  {
+    message: "hello world",
+    imgUrl: "https://picsum.photos/200/200",
+    posted: "2 min ago",
+    userName: "john doe",
+    handle: "@johndoe",
+  },
+  {
+    message: "hello world",
+    imgUrl: "https://picsum.photos/200/200",
+    posted: "2 min ago",
+    userName: "john doe",
+    handle: "@johndoe",
+  },
+  {
+    message: "hello world",
+    imgUrl: "https://picsum.photos/200/200",
+    posted: "2 min ago",
+    userName: "john doe",
+    handle: "@johndoe",
+  },
+  {
+    message: "hello world",
+    imgUrl: "https://picsum.photos/200/200",
+    posted: "2 min ago",
+    userName: "john doe",
+    handle: "@johndoe",
+  },
+];
