@@ -1,3 +1,4 @@
+import './styles/Map.scss';
 import React, { useEffect, useRef } from 'react';
 import { Wrapper, Status } from '@googlemaps/react-wrapper';
 import config from '../config';

@@ -10,8 +10,8 @@ import PageNotFound from "./components/404";
 const App = () => {
   return (
     <div className="App">
-      <TopNavBar />
-      <Routes>
+      <TopNavBar className="navbar" />
+      <Routes className="pageBody">
         <Route path="/" element={<Home />} />
         <Route path="/FindHookah" element={<FindHookah />} />
         <Route path="/Tips" element={<Tips />} />
