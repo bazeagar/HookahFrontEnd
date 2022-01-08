@@ -38,49 +38,33 @@ const HookahLab = () => {
   };
   const addFlavour = () => {
     // show popup
-    const style = {
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      width: 400,
-      bgcolor: "background.paper",
-      border: "2px solid #000",
-      boxShadow: 24,
-      p: 4,
-    };
-    console.log("we here");
     return (
       <>
         <Modal
           open={open}
           handleClose={handleClose}
         >
-          <Box sx={style}>
-            <div>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Flavour</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={currentFlavour}
-                  label="Flavour"
-                  onChange={(event) => setCurrentFlavour(event.target.value)}
-                >
-                  {hookahFlavours.map((f) => (
-                    <MenuItem value={f}>
-                      {makeIds[f.make] + flavourIds[f.flavourId]}
-                    </MenuItem>
-                  ))}
-                  {/* <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem> */}
-                </Select>
-                <Button onClick={handleFlavourAdd}>Add Flavour</Button>
-                <Button onClick={handleClose}>Cancel</Button>
-              </FormControl>
-            </div>
-          </Box>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Flavour</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={currentFlavour}
+              label="Flavour"
+              onChange={(event) => setCurrentFlavour(event.target.value)}
+            >
+              {hookahFlavours.map((f) => (
+                <MenuItem value={f}>
+                  {makeIds[f.make] + flavourIds[f.flavourId]}
+                </MenuItem>
+              ))}
+              {/* <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem> */}
+            </Select>
+            <Button onClick={handleFlavourAdd}>Add Flavour</Button>
+            <Button onClick={handleClose}>Cancel</Button>
+          </FormControl>
         </Modal>
       </>
     );
