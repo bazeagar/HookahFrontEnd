@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import FindHookah from "./components/FindHookah";
 
 const logo = require("./assets/logo.png");
