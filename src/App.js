@@ -2,6 +2,7 @@ import "./App.scss";
 import FindHookah from "./components/FindHookah";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/HomePage";
+import Tips from "./components/Tips";
 import TopNavBar from "./components/TopNavbar";
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/FindHookah" element={<FindHookah />} />
+        <Route path="/tips" element={<Tips />} />
       </Routes>
     </div>
   );
