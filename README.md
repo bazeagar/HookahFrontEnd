@@ -1,7 +1,7 @@
 # HookahFrontEnd
 
 ## Features
- - Hooka tips
- - Hookah finder
- - Hokkah lab2
 
+- Hooka tips
+- Hookah finder
+- Hokkah lab
