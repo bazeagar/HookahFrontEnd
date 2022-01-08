@@ -1,9 +1,8 @@
-import './styles/Map.scss';
-import React, { useEffect, useRef } from 'react';
-import { Wrapper, Status } from '@googlemaps/react-wrapper';
-import config from '../config';
+import "./styles/Map.scss";
+import React, { useEffect, useRef } from "react";
+import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
-const API_KEY = config.API_KEY;
+const API_KEY = process.env.GOOGLE_API_KEY;
 
 const render = (status) => {
   if (status === Status.LOADING) return <h3>{status} ..</h3>;
@@ -11,7 +10,7 @@ const render = (status) => {
   return null;
 };
 
-const  GMap = ({className, center, zoom}) => {
+const GMap = ({ className, center, zoom }) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -22,20 +21,16 @@ const  GMap = ({className, center, zoom}) => {
   });
 
   return <div className={className ?? "Map"} ref={ref} id="map" />;
-}
+};
 
 const Map = (props) => {
-    const center = { lat: -34.397, lng: 150.644 };
-    const zoom = 4;
-    return (
-        <Wrapper apiKey={API_KEY} render={render}>
-            <GMap
-                className={props.class}
-                center={center}
-                zoom={zoom}
-            />
-        </Wrapper>
-    );
-  };
-  
+  const center = { lat: -34.397, lng: 150.644 };
+  const zoom = 4;
+  return (
+    <Wrapper apiKey={API_KEY} render={render}>
+      <GMap className={props.class} center={center} zoom={zoom} />
+    </Wrapper>
+  );
+};
+
 export default Map;
