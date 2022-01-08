@@ -1,18 +1,7 @@
 import * as React from "react";
-import { Paper, InputBase, Divider, IconButton, Button, Modal, Box } from "@mui/material";
+import { Paper, InputBase, Divider, IconButton, Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  boxShadow: 24,
-  p: 4,
-};
-
+import Modal from '../Modal';
 
 export default function CustomizedInputBase() {
   const [open, setOpen] = React.useState(false);
@@ -43,16 +32,8 @@ export default function CustomizedInputBase() {
         Add store info
       </Button>
     </Paper>
-    <Modal
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description"
-    >
-      <Box sx={style}>
+    <Modal handleClose={handleClose} open={open}>
       <span>hi</span>
-      </Box>
-      
     </Modal>
     </>
   );
