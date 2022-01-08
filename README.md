@@ -2,6 +2,6 @@
 
 ## Features
 
-- Hooka tips
+- Hookah tips
 - Hookah finder
-- Hokkah lab
+- Hookah lab
