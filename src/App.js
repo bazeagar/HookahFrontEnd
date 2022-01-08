@@ -7,6 +7,7 @@ import TopNavBar from "./components/TopNavbar";
 import HookahLab from "./components/HookahLab";
 import Posts from "./components/Posts";
 import PageNotFound from "./components/404";
+import { dummyLists } from "./components/FindHookah/DummyHookahList";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       <TopNavBar className="navbar" />
       <Routes className="pageBody">
         <Route path="/" element={<Home />} />
-        <Route path="/FindHookah" element={<FindHookah />} />
+        <Route path="/FindHookah" element={<FindHookah list={dummyLists} />} />
         <Route path="/Tips" element={<Tips />} />
         <Route path="/HookahLab" element={<HookahLab />} />
         <Route path="/Posts" element={<Posts />} />

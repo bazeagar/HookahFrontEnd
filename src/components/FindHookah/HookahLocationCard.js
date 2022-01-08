@@ -5,23 +5,24 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
-const HookahLocationCard = ({ id, title, imageUrl, rating }) => {
+const HookahLocationCard = ({ item, setActiveListItem, activeListItem }) => {
   return (
-    <Card sx={{ width: 345 }}
-      onClick = {() => console.log(id)}
+    <Card
+      sx={{ width: activeListItem === item ? 500 : 345 }}
+      onClick = {() => setActiveListItem(item)}
     >
       <CardMedia
         component="img"
         height="140"
-        image={imageUrl}
+        image={item.imgUrl}
         alt="hooka-card"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {title}
+          {item.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Rating: {rating} / 5
+          Rating: {item.rating} / 5
         </Typography>
       </CardContent>
     </Card>
