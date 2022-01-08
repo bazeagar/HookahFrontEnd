@@ -11,12 +11,13 @@
 
 .FindHookah-header {
   width: 100%;
+  padding: 0.5rem;
 }
 
 .FindHookah-body {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  padding: 0 0.5rem;
 }
 
 .FindHookah-list {
@@ -28,4 +29,5 @@
 .FindHookah-map {
   width: 50%;
   height: 100vh;
+  border-radius: 1%;
 }
