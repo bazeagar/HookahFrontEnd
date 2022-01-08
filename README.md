@@ -9,9 +9,9 @@
 - [x] Google map integration
 - [x] State management between list and map components
 - [x] Style cards and provide contact info
+- [ ] Modal for adding new store info
 - [ ] Search functionality
 - [ ] Advanced filters and other features for Search
-- [ ] Modal for adding new store info
 
 ### Hookah lab
 
