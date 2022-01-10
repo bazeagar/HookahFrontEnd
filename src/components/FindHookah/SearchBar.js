@@ -1,15 +1,21 @@
 import * as React from "react";
-import { Paper, InputBase, Divider, IconButton, Button } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import DirectionsIcon from "@mui/icons-material/Directions";
+import { Paper, InputBase, Divider, IconButton, Button  } from "@mui/material";
+import { Search } from "@mui/icons-material";
+import Modal from '../Modal';
+import AddModalContent from "./AddModalContent";
 
 export default function CustomizedInputBase() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
+    <>
     <Paper
       component="form"
       sx={{
         display: "flex",
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       <InputBase
@@ -18,12 +24,18 @@ export default function CustomizedInputBase() {
         inputProps={{ "aria-label": "search google maps" }}
       />
       <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
-        <SearchIcon />
+        <Search />
       </IconButton>
       <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-      <Button color="primary" sx={{ p: "10px" }} aria-label="directions">
+      <Button
+        onClick={handleOpen}
+        color="primary" sx={{ p: "10px" }} aria-label="add store info">
         Add store info
       </Button>
     </Paper>
+    <Modal handleClose={handleClose} open={open}>
+      <AddModalContent handleClose={handleClose} />
+    </Modal>
+    </>
   );
 }
