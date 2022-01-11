@@ -1,5 +1,10 @@
 import { Button } from "@mui/material";
 import { useState } from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Modal from "./Modal";
+import Select from "@mui/material/Select";
 import {
   hookahFlavours,
   flavourIds,
@@ -10,27 +15,55 @@ import LabItem from "./LabItem";
 
 const HookahLab = () => {
   const title = "Hookah Lab";
+  const [open, setOpen] = useState(false);
 
-  const labItems = hookahFlavours;
-  const [flavours, setFlavours] = useState(labItems);
+  const handleClose = () => {
+    setCurrentFlavour(hookahFlavours[1]);
+    setOpen(false);
+  };
+  const [flavours, setFlavours] = useState([]);
+  // const [addItemPop, setAddItemPop] = useState(false);
+  const [currentFlavour, setCurrentFlavour] = useState(hookahFlavours[1]);
 
   const updateFlavoursAfterRemoving = (id) => {
     setFlavours(flavours.filter((x) => x.id !== id));
   };
 
+  const handleFlavourAdd = () => {
+    console.log("flavaa");
+    setFlavours([...flavours, currentFlavour]);
+    setCurrentFlavour(hookahFlavours[1]);
+    setOpen(false);
+  };
   const addFlavour = () => {
     // show popup
-    setFlavours([
-      ...flavours,
-      {
-        id: 1,
-        make: 1,
-        flavourId: 1,
-        strength: 5,
-        classic: true,
-        imgId: 111,
-      },
-    ]);
+    return (
+      <>
+        <Modal open={open} handleClose={handleClose}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Flavour</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={currentFlavour}
+              label="Flavour"
+              onChange={(event) => setCurrentFlavour(event.target.value)}
+            >
+              {hookahFlavours.map((f) => (
+                <MenuItem value={f}>
+                  {makeIds[f.make] + flavourIds[f.flavourId]}
+                </MenuItem>
+              ))}
+              {/* <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem> */}
+            </Select>
+            <Button onClick={handleFlavourAdd}>Add Flavour</Button>
+            <Button onClick={handleClose}>Cancel</Button>
+          </FormControl>
+        </Modal>
+      </>
+    );
   };
   return (
     <>
@@ -45,15 +78,17 @@ const HookahLab = () => {
             id={item.id}
             flavourRating={item.strength}
             make={makeIds[item.make]}
+            name={flavourIds[item.flavourId]}
             onDelete={updateFlavoursAfterRemoving}
           />
         ))}
-        <Button onClick={addFlavour}>Add item</Button>
+        <Button onClick={() => setOpen(true)}>Add item</Button>
       </div>
 
       <div>Extras</div>
 
       <div>Coal</div>
+      {addFlavour()}
     </>
   );
 };
